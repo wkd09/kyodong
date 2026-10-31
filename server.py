@@ -421,8 +421,9 @@ async def generate_response(utterance: str, session: Dict[str, Any]) -> str:
     ai_reply = await refine_with_openai(utterance, base_reply)
     return ai_reply or base_reply
 
-# 카카오 오픈빌더 스킬 엔드포인트
+# 카카오 오픈빌더 스킬 및 디벨로퍼스 봇 웹훅 엔드포인트
 @app.post("/skill")
+@app.post("/webhook")
 async def kakao_skill_handler(request: Request):
     try:
         body = await request.json()
