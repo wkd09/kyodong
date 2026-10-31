@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.zip
+*.png
+*.pdf
+*.docx
+*.xlsx
+.DS_Store
+ref_*
+promotion-source/
